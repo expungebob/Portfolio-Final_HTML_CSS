@@ -31,6 +31,7 @@ body{
     color: black;
     font-weight: bold;
     border-radius: 9px;
+    cursor: pointer;
 }
 .Video_Text{
     background: rgba(0, 0, 0, 0.664);
@@ -126,7 +127,8 @@ img{
     display: block;
     padding: 5px;
 }
-input[type=submit]:hover {
+/* Contact form  */
+.button_1:hover {
     background-color: Gray;
     color: black;
     font-weight: bold;
@@ -149,7 +151,7 @@ input [type=text]:hover {
     box-shadow: 0 0 18px rgba(255, 136, 0, 0.74)
     
 }
-input[type=submit] {
+.button_1 {
     background-color: rgb(255, 81, 0);
     color: whitesmoke;
     font-weight: bold;
@@ -157,11 +159,13 @@ input[type=submit] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    display: block;
+    display: inline-block;
     margin-left: auto;
     margin-right: auto;
     font-family: rockwell extra bold;
+    
 }
+
 form{
     border-radius: 2px;
     background-color: #3f5e7c;
@@ -172,7 +176,33 @@ form{
     color: aqua;
     width: 50%;
     border-radius: 10px;
+} 
+/*  popup  */
+.contact_popup {
+  margin: 10px auto;
+  z-index: 8;
+  display: none;
+  position: relative;
+  bottom: 6px;
+  right: 6px;
 }
+.Pop_Up_Button {
+  bottom: 15px;
+  right: 15px;
+  height: 40px;
+  width: 15vw;  
+  background-color:rgb(255, 81, 0);
+  color: white;
+  border: solid;
+  cursor: pointer;
+  position: fixed;
+  border-radius: 6px;
+  font-size: 18px;
+  float: right;
+ 
+}
+
+/* Contact form End */
 p:hover{
     color: #00004d;
     transition: transform 1s;

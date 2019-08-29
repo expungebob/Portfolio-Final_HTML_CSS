@@ -4,13 +4,15 @@
 	<meta charset="UTF-8">
     <title>Portfolio Website</title>
     <link rel="stylesheet" type="text/css" href="./CSS/Portfolio_final.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 </head>
 	<body class="Background">
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
             <a href="#About">About</a>
             <a href="#Github">Github</a>
-            <a href="#Contact">Contact</a>	<!--Change/Edit-->
+            <a onclick="openModal()">Gallery</a>
+            <a onclick="open_contact()" href="#contact">Contact</a>	
        </div>
 <!--HOME Section-->
 <br>
@@ -24,7 +26,7 @@
 </div>
 <!--Video text Section-->
     <div class="Video_Text">
-        <h1 style="color:white;">Derrick's Portfolio</h1>	<!--Change/Edit-->
+        <h1 style="color:white;">Derrick's Portfolio</h1>	
         <p>
             <strong>
                 <center>
@@ -42,7 +44,7 @@
 <!--About Section-->
 <div class="Row" id="About">
     <div class="Column_2">
-        <img src="./IMAGES/DWAVE.jpg" alt=""> <!--Change/Edit-->          
+        <img src="./IMAGES/DWAVE.jpg" alt="">       
     </div>
     <div class="Column_1">
     <h1>About</h1>
@@ -66,23 +68,28 @@
 
     <!--Contact Section-->
    	<div class="Row" id="Contact">
-        <div class="Column_3">
+        <!--<div class="Column_3">
             <img src="./IMAGES/email.jpg" alt="Contact_Image">
-        </div>
+        </div>-->
         
-        <div class="Column_1">
-            <h1>Contact</h1>
-            <form action="" method="GET">
+       <button onclick="open_contact()" id="contact" class="Pop_Up_Button">Contact Me</button>
+           <div class="contact_popup" id="contact_form">
+            <form action="" method="POST"class="form-container">
                 <label>Name:</label>
-                    <input type="text" placeholder="Please enter your name here">
+                    <input name="name" type="text" placeholder="Please enter your name here">
                 <label>Email:</label>
                     <input type="text" name="Email" id="Email" placeholder="Please enter your email here">
                 <label>Message:</label>
-                    <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                    <input type="submit" value="Submit">
+                    <input type="text" id="Message" name="Message" placeholder="Please write your message here"><br>
+                    
+
+  <!--Fix class btn on css--><button class="button_1" class="btn">Submit</button>
+                                   
+                    <button  class="button_1" onclick="close_contact()">Cancel</button>
             </form>
+           </div>
         </div>
-    </div>
+    
         <!--Modal Section-->
         <div class="row">
                 <div class="column">
@@ -165,7 +172,7 @@
 
 
     <script src="./JS/one_page_website.js"></script>
-<!--Conact Section-->
+<!--Contact Section-->
         <footer>
             <p>
                 <center>&copy ExpungeBob @ <a href="https://learncodinganywhere.com/">The Tech Academy</a></center>

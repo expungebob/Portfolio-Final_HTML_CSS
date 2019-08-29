@@ -34,3 +34,12 @@ function openModal() {
     dots[slideIndex-1].className += " active";
     captionText.innerHTML = dots[slideIndex-1].alt;
   }
+
+  function open_contact() {
+      document.getElementById("contact_form").style.display = "block";
+  }
+
+  function close_contact() {
+    document.getElementById("contact_form").style.display = "none";
+    this.Close();
+  }
